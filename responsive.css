@@ -1,0 +1,45 @@
+@media(max-width: 769px){
+    .page-home{
+        margin: auto;
+    }
+
+    .page-home header img{
+        width: 100%;
+        height: 625px;
+    }
+
+    .title{
+        top: 20%;
+        left: 10%;
+    }
+
+    .adresses .address p {
+        font-size: 18px;
+    }
+
+    .infos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .services {
+        width: 65%;
+        margin-top: 25px;
+        align-items: center;
+    }
+
+    #form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 426px) {
+    .page-home header img{
+        width: 100%;
+        height: 625px;
+    }
+}
