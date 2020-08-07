@@ -40,6 +40,51 @@
 @media (max-width: 426px) {
     .page-home header img{
         width: 100%;
-        height: 625px;
+        height: 375px;
     }
+
+    .title{
+        top: 10%;
+        left: 10%;
+    }
+
+    .title p {
+        font-size: 65px;
+    }
+
+    .adresses {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .adresses .address p {
+        font-size: 20px;
+    }
+
+    #form {
+        margin-top: 25px;
+    }
+
+    .submit {
+        width: 55%;
+    }
+}
+
+@media (max-width: 321px) {
+    .page-home header img{
+        width: 100%;
+        height: 300px;
+    }
+
+    .title{
+        top: 8%;
+        left: 10%;
+    }
+
+    .title p {
+        font-size: 45px;
+    }
+
+    
+
 }
