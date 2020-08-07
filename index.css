@@ -20,3 +20,8 @@ body {
     background-color: #3e6f55;
     border: 0;
 }
+
+a {
+    text-decoration: none;
+    color: #000;
+}
