@@ -35,6 +35,19 @@ form.addEventListener('submit', function(e){
     })
     .then(function(response){
         console.log('Success: ', JSON.stringify(response))
+
+        alert(
+        `Agendamento Realizado: 
+        Nome ${name}
+        Email: ${email.value} 
+        Telefone: ${telephone.value} 
+        Data: ${date.value} 
+        Hora: ${hour.value}
+        `
+        )
+        if (window.confirm("Deseja Consultar o registro realizado?")) { 
+            window.open('http://localhost:8000/posts', "Obrigado por agendar conosco!");
+        }
     })
     .catch(error => console.error('Error:', error))
 
