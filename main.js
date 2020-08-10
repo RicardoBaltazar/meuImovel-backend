@@ -6,7 +6,8 @@ let date = document.querySelector('#date')
 let hour = document.querySelector('#hour')
 let form = document.querySelector('form')
 
-let url = 'http://localhost:8000/posts'
+//let url = 'http://localhost:8000/posts'
+let url = 'https://api-de-test.herokuapp.com/posts'
 
 
 
@@ -46,7 +47,8 @@ form.addEventListener('submit', function(e){
         `
         )
         if (window.confirm("Deseja Consultar o registro realizado?")) { 
-            window.open('http://localhost:8000/posts', "Obrigado por agendar conosco!");
+            //window.open('http://localhost:8000/posts', "Obrigado por agendar conosco!");
+            window.open('https://api-de-test.herokuapp.com/posts', "Obrigado por agendar conosco!");
         }
     })
     .catch(error => console.error('Error:', error))
