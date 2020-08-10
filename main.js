@@ -46,10 +46,16 @@ form.addEventListener('submit', function(e){
         Hora: ${hour.value}
         `
         )
+
+        alert('Obrigado pela preferência!')
+
+        /*
         if (window.confirm("Deseja Consultar o registro realizado?")) { 
             //window.open('http://localhost:8000/posts', "Obrigado por agendar conosco!");
             window.open('https://api-de-test.herokuapp.com/posts', "Obrigado por agendar conosco!");
         }
+        */
+    
     })
     .catch(error => console.error('Error:', error))
 
