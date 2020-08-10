@@ -4,7 +4,7 @@
   
 ![Barber](https://user-images.githubusercontent.com/56805229/89821208-a1518000-db24-11ea-8b92-df74e9863876.png)  
   
-Site de Barbearia para consultar informações e realizar agendamento de horários para atendimento.  
+Site da Barbearia para passar informações sobre os serviços e realizar agendamentos de horários para o atendimento aos clientes.  
   
 ### Tecnologias  
   
