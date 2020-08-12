@@ -1,4 +1,4 @@
-<h1 align="center">Barbearia Retrô</h1  
+<h1 align="center">Barbearia Retrô</h1>  
   
 #### Visite o projeto aqui [link](https://barbearia-retro.vercel.app/)  
   
