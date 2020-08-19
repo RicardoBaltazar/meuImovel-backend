@@ -2,7 +2,7 @@
   
 #### Visite o projeto aqui [link](https://barbearia-retro.vercel.app/)  
   
-![Barber](https://user-images.githubusercontent.com/56805229/89821208-a1518000-db24-11ea-8b92-df74e9863876.png)  
+![barbearia-retro](https://user-images.githubusercontent.com/56805229/90592628-6acad380-e1bc-11ea-8128-ec2716e32925.png)    
   
 Site da Barbearia para passar informações sobre os serviços e realizar agendamentos de horários para o atendimento aos clientes.  
   
