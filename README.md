@@ -15,8 +15,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)  
 - [Json Server](https://www.npmjs.com/package/json-server)  
   
-![barbearia-retro](https://user-images.githubusercontent.com/56805229/89822091-035eb500-db26-11ea-84a5-8b24510fc7cf.gif)  
-![barbearia-retro-responsive](https://user-images.githubusercontent.com/56805229/89823285-9b10d300-db27-11ea-9acd-6a7d297babea.gif)  
+!![barbearia-retro](https://user-images.githubusercontent.com/56805229/90798920-f2adfc00-e2e8-11ea-8959-c3c204637ecf.gif)    
+![barbearia-retro-responsive1](https://user-images.githubusercontent.com/56805229/90798974-035e7200-e2e9-11ea-9e8f-af7b2333a2b5.gif)  
   
 ### Api Json Server  
 Este projeto utiliza uma api para guardar o dados cadastrados.  
