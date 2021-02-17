@@ -4,7 +4,7 @@ const HEADER = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 40px 8%;
+    padding: 0px 8% 25px 8%;
     transition: 0.2s;
    
     
