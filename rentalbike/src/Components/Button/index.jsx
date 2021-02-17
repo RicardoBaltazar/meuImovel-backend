@@ -18,6 +18,11 @@ const BUTTON = styled.button`
             cursor: pointer;
             opacity: 75%;
         }
+
+        @media screen and (max-width: 500px) {   
+            width: 100%;
+            margin: 10px auto; 
+      }
 `
 
 function Button(props) {

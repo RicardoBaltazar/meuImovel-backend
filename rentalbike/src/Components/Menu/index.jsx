@@ -29,6 +29,10 @@ const HEADER = styled.header`
     li {
         margin-left: 45px;
         transition: 0.1s;
+
+        &:hover{
+            opacity: 75%;
+        }
     }
    
 
@@ -37,7 +41,7 @@ const HEADER = styled.header`
     }
 
     .btn-signin {
-        color: var(--title-ccolor);
+        color: #212353;
         font-weight: bold;
     }
 
@@ -55,6 +59,12 @@ const HEADER = styled.header`
         font-size:22px;
         margin-left: 5px;
         color: var(--primary-color);
+    }
+
+    @media screen and (max-width: 500px) {
+    display: none;
+
+    
     }
 `;
 

@@ -23,6 +23,11 @@ const Main = styled.main`
     h2 {
       font-size: 65px;
       color: var(--title-color);
+
+      @media screen and (max-width: 500px) {   
+        font-size: 50px;
+      }
+
     }
     
     p{
@@ -31,13 +36,30 @@ const Main = styled.main`
       max-width: 375px;
       line-height: 1.2;
       margin: 15px 0;
+
+      @media screen and (max-width: 500px) {   
+        margin:0;
+      }
     }
+
+  }
+
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+    align-items: center;
+    text-align:left;
+    height: 75vh;
+    padding: 0 5%;
   }
 `
 
 const ImgHome = styled.img`
   width: 700px;
   margin-right: -30px;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `
 
 export default function Home() {
@@ -54,10 +76,10 @@ export default function Home() {
           <section>
             <h2>Rent out a bike and explore.</h2>
             <p>
-              Rent a bike and take a cycling trip alone pr with  
+              Rent a bike and take a cycling trip alone pr with
               your family and friends through city and discover its beauty!
             </p>
-            <Button text='Rent a bike'/>
+            <Button text='Rent a bike' />
           </section>
           <ImgHome src={img} />
         </Main>
