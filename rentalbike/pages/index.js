@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import styled from 'styled-components';
-import Link from 'next/link';
 
-import img from '../public/img/undraw_Ride_a_bicycle_2yok.png'
-import Container from '../src/Components/Container'
-import Menu from '../src/Components/Menu'
-import Button from '../src/Components/Button/'
+
+import img from '../public/img/undraw_Ride_a_bicycle_2yok.png';
+import Container from '../src/Components/Container';
+import Menu from '../src/Components/Menu';
+import Button from '../src/Components/Button/';
 
 const Main = styled.main`
   display: flex;
@@ -18,10 +18,10 @@ const Main = styled.main`
     /* border: 1px solid yellow; */
     flex-direction: column;
     justify-content: space-between;
-    height: 55vh;
+    height: 60vh;
 
     h2 {
-      font-size: 65px;
+      font-size: 55px;
       color: var(--title-color);
 
       @media screen and (max-width: 900px) {   
@@ -91,18 +91,19 @@ export default function Home() {
       </Head>
       <Container>
         <Menu
+          home='#'
           link1='About Us'
           link2='Bikes'
           link3='Places'
         />
         <Main>
           <section>
-            <h2>Rent out a bike and explore.</h2>
+            <h2>Alugue uma bicicleta e explore a cidade.</h2>
             <p>
-              Rent a bike and take a cycling trip alone pr with
-              your family and friends through city and discover its beauty!
+            Alugue uma bicicleta e faça um passeio sozinho ou com
+            sua família e amigos pela cidade e descubra suas belezas!
             </p>
-            <Button text='Rent a bike' />
+            <Button text='Alugue uma Bike' />
             <div className='responsive-sign'>
               <a href="#" className='responsive-btn-signin'>Sign in</a>
               <a href="#" className='responsive-btn-signUp'><b>Sign Up</b></a>

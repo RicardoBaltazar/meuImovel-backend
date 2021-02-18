@@ -20,6 +20,7 @@ const HEADER = styled.header`
         margin-right: 40px;
         font-size: 22px;
         color: var(--title-color);
+        cursor: pointer;
     }
 
     span{
@@ -114,7 +115,7 @@ function Menu(props) {
         <>
             <HEADER>
                 <div>
-                    <h1>Bike<span>App</span></h1>
+                    <Link href={props.home}><h1>Bike<span>App</span></h1></Link>
                     <ul>
                         <li><Link href='/about'>{props.link1}</Link></li>
                         <li><Link href="/bikes">{props.link2}</Link></li>

@@ -4,13 +4,13 @@ const BUTTON = styled.button`
         color: #FFFFFF;
         font-weight: bold;
         background-color: var(--primary-color);
-        padding: 18px 25px;
+        padding: 20px 25px;
         border-radius: 25px;
         border: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 150px;
+        width: 175px;
         transition: 0.2s;
         
         &:hover{
