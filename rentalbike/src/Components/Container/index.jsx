@@ -5,8 +5,8 @@ const Container = styled.div`
   height: 100vh;
   /* padding-top: 35px; */
   margin: auto 0;
-  border: 1px solid green;
-  @media screen and (max-width: 500px) {
+  /* border: 1px solid green; */
+  @media screen and (max-width: 900px) {
     margin: auto;
     height: 110vh;
     padding: 15px;

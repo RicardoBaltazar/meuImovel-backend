@@ -13,22 +13,19 @@ const Main = styled.main`
   padding: 0px 8%;
 
   section{
-    
     display: flex;
-
+    /* border: 1px solid yellow; */
     flex-direction: column;
     justify-content: space-between;
-    height: 325px;
+    height: 55vh;
 
     h2 {
       font-size: 65px;
       color: var(--title-color);
 
-      @media screen and (max-width: 500px) {   
+      @media screen and (max-width: 900px) {   
         font-size: 50px;
       }
-
-
     }
     
     p{
@@ -42,15 +39,13 @@ const Main = styled.main`
     .responsive-sign {
       display: none;
 
-    
-
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 900px) {
         display: block;
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: space-around;
         align-items: center;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         padding: 10px 0;
 
         a{
@@ -65,12 +60,13 @@ const Main = styled.main`
 
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     justify-content: center;
     align-items: center;
     text-align:left;
-    height: 75vh;
+    height: 80vh;
     padding: 0 5%;
+    margin-top: -10vh;
   }
 
 `
@@ -79,7 +75,7 @@ const ImgHome = styled.img`
   width: 700px;
   margin-right: -30px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `

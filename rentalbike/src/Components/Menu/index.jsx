@@ -6,13 +6,13 @@ const HEADER = styled.header`
     align-items: baseline;
     padding: 25px 8% 25px 8%;
     transition: 0.2s;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
    
     div {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     h1 {
@@ -47,6 +47,9 @@ const HEADER = styled.header`
     .btn-signin {
         color: #212353;
         font-weight: bold;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
     }
 
     .btn-signUp{
@@ -57,6 +60,9 @@ const HEADER = styled.header`
         border-radius: 25px;
         display: flex;
         align-items: center;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
     }
 
     span {
@@ -65,25 +71,32 @@ const HEADER = styled.header`
         color: var(--primary-color);
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 900px) {
         /* display: none; */
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         
 
         div {
             flex-direction: column;
-            justify-content: center;
+            width: 100%;
             align-items: center;
-            text-align: center;
         }
 
         ul{
-            display: none;
+            display: flex;
+            justify-content: space-space-between;
+        }
+
+        li{
+            margin: 0 7vw;
         }
 
         h1{
             font-size: 32px;
+            margin-right: 0;
+            margin-bottom: 15px;
         }
 
         span {
@@ -91,6 +104,8 @@ const HEADER = styled.header`
         }
 
     }
+
+    
 `;
 
 function Menu(props) {

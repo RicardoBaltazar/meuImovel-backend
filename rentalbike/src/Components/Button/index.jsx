@@ -18,8 +18,8 @@ const BUTTON = styled.button`
             opacity: 75%;
         }
 
-        @media screen and (max-width: 500px) {   
-            width: 75vw;
+        @media screen and (max-width: 900px) {   
+            width: 90vw;
             margin: 10px auto; 
       }
 `
