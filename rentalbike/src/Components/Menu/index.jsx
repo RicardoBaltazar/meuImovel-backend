@@ -4,20 +4,25 @@ const HEADER = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 0px 8% 25px 8%;
+    padding: 25px 8% 25px 8%;
     transition: 0.2s;
+    border: 1px solid blue;
    
-    
     div {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        border: 1px solid red;
     }
 
     h1 {
         margin-right: 40px;
         font-size: 22px;
         color: var(--title-color);
+    }
+
+    span{
+        color: var(--primary-color);
     }
 
     ul {
@@ -35,7 +40,6 @@ const HEADER = styled.header`
         }
     }
    
-
     a {
         color: var(--secondary-color);
     }
@@ -62,25 +66,46 @@ const HEADER = styled.header`
     }
 
     @media screen and (max-width: 500px) {
-    display: none;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+        
 
-    
+        div {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        ul{
+            display: none;
+        }
+
+        h1{
+            font-size: 32px;
+        }
+
+        span {
+            font-size: 32px;
+        }
+
     }
 `;
 
-function Menu() {
+function Menu(props) {
     return (
         <>
             <HEADER>
                 <div>
-                    <h1>RentalBike</h1>
+                    <h1>Bike<span>App</span></h1>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Bikes</a></li>
-                        <li><a href="#">Places</a></li>
+                        <li><a href="#">{props.link1}</a></li>
+                        <li><a href="#">{props.link2}</a></li>
+                        <li><a href="#">{props.link3}</a></li>
                     </ul>
                 </div>
-                <ul >
+                <ul className='ul-sign'>
                     <li><a href="#" className='btn-signin'>Sign in</a></li>
                     <li><a href="#" className='btn-signUp'>Sign Up <span>&#10132;</span></a></li>
                 </ul>

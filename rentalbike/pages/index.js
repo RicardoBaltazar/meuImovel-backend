@@ -28,6 +28,7 @@ const Main = styled.main`
         font-size: 50px;
       }
 
+
     }
     
     p{
@@ -36,11 +37,31 @@ const Main = styled.main`
       max-width: 375px;
       line-height: 1.2;
       margin: 15px 0;
-
-      @media screen and (max-width: 500px) {   
-        margin:0;
-      }
     }
+
+    .responsive-sign {
+      display: none;
+
+    
+
+      @media screen and (max-width: 500px) {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid black;
+        padding: 10px 0;
+
+        a{
+        color: #111827;
+        margin-bottom: 5px;
+        font-size: 18px;
+        }
+
+        
+      }
+    } 
 
   }
 
@@ -51,6 +72,7 @@ const Main = styled.main`
     height: 75vh;
     padding: 0 5%;
   }
+
 `
 
 const ImgHome = styled.img`
@@ -67,11 +89,15 @@ export default function Home() {
     <div >
       <Head>
         <title>
-          RentalBike App
+          BikeApp - Aluguel de Bicicletas
         </title>
       </Head>
       <Container>
-        <Menu />
+        <Menu
+          link1='About Us'
+          link2='Bikes'
+          link3='Places'
+        />
         <Main>
           <section>
             <h2>Rent out a bike and explore.</h2>
@@ -80,6 +106,10 @@ export default function Home() {
               your family and friends through city and discover its beauty!
             </p>
             <Button text='Rent a bike' />
+            <div className='responsive-sign'>
+              <a href="#" className='responsive-btn-signin'>Sign in</a>
+              <a href="#" className='responsive-btn-signUp'><b>Sign Up</b></a>
+            </div>
           </section>
           <ImgHome src={img} />
         </Main>

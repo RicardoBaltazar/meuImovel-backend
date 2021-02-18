@@ -13,14 +13,13 @@ const BUTTON = styled.button`
         width: 150px;
         transition: 0.2s;
         
-
         &:hover{
             cursor: pointer;
             opacity: 75%;
         }
 
         @media screen and (max-width: 500px) {   
-            width: 100%;
+            width: 75vw;
             margin: 10px auto; 
       }
 `
