@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const HEADER = styled.header`
     display: flex;
@@ -115,9 +116,9 @@ function Menu(props) {
                 <div>
                     <h1>Bike<span>App</span></h1>
                     <ul>
-                        <li><a href="#">{props.link1}</a></li>
-                        <li><a href="#">{props.link2}</a></li>
-                        <li><a href="#">{props.link3}</a></li>
+                        <li><Link href='/about'>{props.link1}</Link></li>
+                        <li><Link href="/bikes">{props.link2}</Link></li>
+                        <li><Link href="/places">{props.link3}</Link></li>
                     </ul>
                 </div>
                 <ul className='ul-sign'>

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import img from '../public/img/undraw_Ride_a_bicycle_2yok.png'
 import Container from '../src/Components/Container'
