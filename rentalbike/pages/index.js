@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 
 import img from '../public/img/undraw_Ride_a_bicycle_2yok.png';
@@ -96,7 +97,17 @@ export default function Home() {
           link2='Bikes'
           link3='Places'
         />
-        <Main>
+        <Main
+        as={motion.section}
+        // transition={{ delay: 0.2, duration: 0.3 }}
+        transition={{ ease: "easeOut", duration: 0.5 }}
+        variants={{
+          show: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        initial='hidden'
+        animate='show'
+        >
           <section>
             <h2>Alugue uma bicicleta e explore a cidade.</h2>
             <p>
