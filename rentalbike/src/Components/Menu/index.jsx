@@ -7,13 +7,13 @@ const HEADER = styled.header`
     align-items: baseline;
     padding: 25px 8% 25px 8%;
     transition: 0.2s;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
    
     div {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        /* border: 1px solid red; */
+        border: 1px solid green;
     }
 
     h1 {
@@ -36,6 +36,7 @@ const HEADER = styled.header`
     li {
         margin-left: 45px;
         transition: 0.1s;
+        border: 1px solid brown;
 
         &:hover{
             opacity: 75%;
@@ -50,19 +51,29 @@ const HEADER = styled.header`
         color: #212353;
         font-weight: bold;
         @media screen and (max-width: 900px) {
+            font-size: 0.8rem;
+        }
+        @media screen and (max-width: 500px) {
             display: none;
         }
     }
 
     .btn-signUp{
-        color: var(--title-color);
+        color: var(--primary-color);
         font-weight: bold;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        padding: 10px 25px;
+        padding: 0.8rem 1.5rem;
         border-radius: 25px;
         display: flex;
+        justify-content: center;
         align-items: center;
         @media screen and (max-width: 900px) {
+            font-size: 0.8rem;
+            width: 13vw;
+            padding: 0.8rem 1rem;
+            
+        }
+        @media screen and (max-width: 500px) {
             display: none;
         }
     }
@@ -75,35 +86,42 @@ const HEADER = styled.header`
 
     @media screen and (max-width: 900px) {
         /* display: none; */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        /* flex-direction: column; */
+        padding: 25px 1rem;
+        align-items: baseline;
         
 
         div {
-            flex-direction: column;
+            /* flex-direction: column; */
             width: 100%;
-            align-items: center;
+            align-items: baseline;
+            justify-content: left;
         }
 
         ul{
             display: flex;
-            justify-content: space-space-between;
+            justify-content: space-between;
         }
 
         li{
-            margin: 0 7vw;
+            width: 10vw;
+            font-size: 0.8rem;
+            margin: 0.5rem;
         }
 
         h1{
-            font-size: 32px;
+            font-size: 1.5rem;
             margin-right: 0;
             margin-bottom: 15px;
         }
 
-        span {
+        /* span {
             font-size: 32px;
-        }
+        } */
+
+    }
+
+    @media screen and (max-width: 500px) {
 
     }
 
@@ -115,7 +133,7 @@ function Menu(props) {
         <>
             <HEADER>
                 <div>
-                    <Link href={props.home}><h1>Bike<span>App</span></h1></Link>
+                    <Link href={props.home}><h1>BikeApp<span></span></h1></Link>
                     <ul>
                         <li><Link href='/about'>{props.link1}</Link></li>
                         <li><Link href="/bikes">{props.link2}</Link></li>
@@ -124,7 +142,7 @@ function Menu(props) {
                 </div>
                 <ul className='ul-sign'>
                     <li><a href="#" className='btn-signin'>Sign in</a></li>
-                    <li><a href="#" className='btn-signUp'>Sign Up <span>&#10132;</span></a></li>
+                    <li><a href="#" className='btn-signUp'>Sign Up</a></li>
                 </ul>
             </HEADER>
         </>

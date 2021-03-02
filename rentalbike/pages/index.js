@@ -13,13 +13,15 @@ const Main = styled.main`
   justify-content: space-between;
   align-items: center;
   padding: 0px 8%;
+    border: 1px solid red;
 
   section{
     display: flex;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     flex-direction: column;
     justify-content: space-between;
-    height: 60vh;
+    height: 50vh;
+    margin-top: -3rem;
 
     h2 {
       font-size: 55px;
@@ -38,28 +40,6 @@ const Main = styled.main`
       margin: 15px 0;
     }
 
-    .responsive-sign {
-      display: none;
-
-      @media screen and (max-width: 900px) {
-        display: block;
-        display: flex;
-        /* flex-direction: column; */
-        justify-content: space-around;
-        align-items: center;
-        /* border: 1px solid black; */
-        padding: 10px 0;
-
-        a{
-        color: #111827;
-        margin-bottom: 5px;
-        font-size: 18px;
-        }
-
-        
-      }
-    } 
-
   }
 
   @media screen and (max-width: 900px) {
@@ -67,14 +47,14 @@ const Main = styled.main`
     align-items: center;
     text-align:left;
     height: 80vh;
-    padding: 0 5%;
+    padding: 0 1rem;
     margin-top: -10vh;
   }
 
 `
 
 const ImgHome = styled.img`
-  width: 700px;
+  width: 50vw;
   margin-right: -30px;
 
   @media screen and (max-width: 900px) {
@@ -115,10 +95,10 @@ export default function Home() {
             sua família e amigos pela cidade e descubra suas belezas!
             </p>
             <Button text='Alugue uma Bike' />
-            <div className='responsive-sign'>
+            {/* <div className='responsive-sign'>
               <a href="#" className='responsive-btn-signin'>Sign in</a>
               <a href="#" className='responsive-btn-signUp'><b>Sign Up</b></a>
-            </div>
+            </div> */}
           </section>
           <ImgHome src={img} />
         </Main>

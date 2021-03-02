@@ -19,6 +19,11 @@ const BUTTON = styled.button`
         }
 
         @media screen and (max-width: 900px) {   
+            width: 50vw;
+            margin: 10px auto; 
+      }
+
+        @media screen and (max-width: 500px) {   
             width: 90vw;
             margin: 10px auto; 
       }
