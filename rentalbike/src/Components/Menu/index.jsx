@@ -7,14 +7,14 @@ const HEADER = styled.header`
     align-items: baseline;
     padding: 25px 8% 25px 8%;
     transition: 0.2s;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
    
-    div {
+    /* div {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         border: 1px solid green;
-    }
+    } */
 
     h1 {
         margin-right: 40px;
@@ -36,7 +36,7 @@ const HEADER = styled.header`
     li {
         margin-left: 45px;
         transition: 0.1s;
-        border: 1px solid brown;
+        /* border: 1px solid brown; */
 
         &:hover{
             opacity: 75%;
@@ -47,7 +47,7 @@ const HEADER = styled.header`
         color: var(--secondary-color);
     }
 
-    .btn-signin {
+    /* .btn-signin {
         color: #212353;
         font-weight: bold;
         @media screen and (max-width: 900px) {
@@ -56,12 +56,13 @@ const HEADER = styled.header`
         @media screen and (max-width: 500px) {
             display: none;
         }
-    }
+    } */
 
     .btn-signUp{
         color: var(--primary-color);
         font-weight: bold;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+        border: 2px solid var(--primary-color);
         padding: 0.8rem 1.5rem;
         border-radius: 25px;
         display: flex;
@@ -78,11 +79,11 @@ const HEADER = styled.header`
         }
     }
 
-    span {
+    /* span {
         font-size:22px;
         margin-left: 5px;
         color: var(--primary-color);
-    }
+    } */
 
     @media screen and (max-width: 900px) {
         /* display: none; */
@@ -132,16 +133,19 @@ function Menu(props) {
     return (
         <>
             <HEADER>
-                <div>
+                
                     <Link href={props.home}><h1>BikeApp<span></span></h1></Link>
-                    <ul>
-                        <li><Link href='/about'>{props.link1}</Link></li>
-                        <li><Link href="/bikes">{props.link2}</Link></li>
-                        <li><Link href="/places">{props.link3}</Link></li>
-                    </ul>
-                </div>
+                    {/* <ul>
+                        <li><Link href='/'>{props.link1}</Link></li>
+                        <li><Link href="/sobre">{props.link2}</Link></li>
+                        <li><Link href="/bikes">{props.link3}</Link></li>
+                    </ul> */}
+                
                 <ul className='ul-sign'>
-                    <li><a href="#" className='btn-signin'>Sign in</a></li>
+                    <li><Link href='/'>{props.link1}</Link></li>
+                    <li><Link href="/sobre">{props.link2}</Link></li>
+                    <li><Link href="/bikes">{props.link3}</Link></li>
+                    <li><a href="#" >Sign in</a></li>
                     <li><a href="#" className='btn-signUp'>Sign Up</a></li>
                 </ul>
             </HEADER>

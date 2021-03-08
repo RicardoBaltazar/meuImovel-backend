@@ -9,19 +9,37 @@ import Menu from '../src/Components/Menu';
 import Button from '../src/Components/Button/';
 
 const Main = styled.main`
-  display: flex;
+  /* display: flex;
+  height: 85vh;
+  
   justify-content: space-between;
+  align-items: center; */
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0px 8%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
   section{
     display: flex;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    /* height: 50vh; */
+    height: 84vh;
+    /* margin-top: -3rem; */
+
+    .div-title-home {
+      /* background-color: red; */
+      display: flex;
+    /* border: 1px solid yellow; */
     flex-direction: column;
     justify-content: space-between;
-    height: 50vh;
-    margin-top: -3rem;
+    /* height: 50vh; */
+    /* height: 50vh;
+    margin-top: -3rem; */
+    }
 
     h2 {
       font-size: 55px;
@@ -55,7 +73,8 @@ const Main = styled.main`
 
 const ImgHome = styled.img`
   width: 50vw;
-  margin-right: -30px;
+  /* margin-right: -30px; */
+  /* border: 1px solid black; */
 
   @media screen and (max-width: 900px) {
     display: none;
@@ -73,34 +92,36 @@ export default function Home() {
       <Container>
         <Menu
           home='#'
-          link1='About Us'
-          link2='Bikes'
-          link3='Places'
+          link1='Home'
+          link2='sobre'
+          link3='bikes'
         />
         <Main
-        as={motion.section}
-        // transition={{ delay: 0.2, duration: 0.3 }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
-        variants={{
-          show: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-        initial='hidden'
-        animate='show'
+          as={motion.section}
+          // transition={{ delay: 0.2, duration: 0.3 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial='hidden'
+          animate='show'
         >
           <section>
-            <h2>Alugue uma bicicleta e explore a cidade.</h2>
-            <p>
-            Alugue uma bicicleta e faça um passeio sozinho ou com
-            sua família e amigos pela cidade e descubra suas belezas!
+            <div className='div-title-home'>
+              <h2>Alugue uma bicicleta e explore a cidade.</h2>
+              <p>
+                Alugue uma bicicleta e faça um passeio sozinho ou com
+                sua família e amigos pela cidade e descubra suas belezas!
             </p>
-            <Button text='Alugue uma Bike' />
+              <Button text='Alugue uma Bike' />
+            </div>
             {/* <div className='responsive-sign'>
               <a href="#" className='responsive-btn-signin'>Sign in</a>
               <a href="#" className='responsive-btn-signUp'><b>Sign Up</b></a>
             </div> */}
+            <ImgHome src={img} />
           </section>
-          <ImgHome src={img} />
         </Main>
       </Container>
 
