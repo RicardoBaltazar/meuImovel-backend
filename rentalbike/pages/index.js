@@ -15,13 +15,25 @@ const Main = styled.main`
   justify-content: space-between;
   align-items: center; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px 8%;
     /* border: 1px solid red; */
 
-  section{
-    display: flex;
+  @media screen and (max-width: 900px) {
+    justify-content: center;
+    align-items: center;
+    text-align:left;
+    height: 80vh;
+    padding: 0 1rem;
+    margin-top: -10vh;
+  }
+
+`
+
+const SectionHome = styled.section`
+  display: flex;
     /* border: 1px solid yellow; */
     /* flex-direction: column; */
     justify-content: space-between;
@@ -57,18 +69,6 @@ const Main = styled.main`
       line-height: 1.2;
       margin: 15px 0;
     }
-
-  }
-
-  @media screen and (max-width: 900px) {
-    justify-content: center;
-    align-items: center;
-    text-align:left;
-    height: 80vh;
-    padding: 0 1rem;
-    margin-top: -10vh;
-  }
-
 `
 
 const ImgHome = styled.img`
@@ -79,6 +79,19 @@ const ImgHome = styled.img`
   @media screen and (max-width: 900px) {
     display: none;
   }
+`
+
+const SectionLogin = styled.section`
+    display: flex;
+    /* border: 1px solid yellow; */
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    /* height: 50vh; */
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-color);
+    /* margin-top: -3rem; */
 `
 
 export default function Home() {
@@ -107,7 +120,7 @@ export default function Home() {
           initial='hidden'
           animate='show'
         >
-          <section>
+          <SectionHome>
             <div className='div-title-home'>
               <h2>Alugue uma bicicleta e explore a cidade.</h2>
               <p>
@@ -121,7 +134,11 @@ export default function Home() {
               <a href="#" className='responsive-btn-signUp'><b>Sign Up</b></a>
             </div> */}
             <ImgHome src={img} />
-          </section>
+          </SectionHome>
+          <SectionLogin>
+            a
+          </SectionLogin>
+
         </Main>
       </Container>
 
