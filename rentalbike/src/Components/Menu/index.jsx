@@ -58,38 +58,21 @@ const HEADER = styled.header`
         }
     } */
 
-    .btn-signUp{
+    .btn-entrar{
         color: var(--primary-color);
         font-weight: bold;
-        /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
         border: 2px solid var(--primary-color);
         padding: 0.8rem 1.5rem;
         border-radius: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
-        @media screen and (max-width: 900px) {
-            font-size: 0.8rem;
-            width: 13vw;
-            padding: 0.8rem 1rem;
-            
-        }
-        @media screen and (max-width: 500px) {
-            display: none;
-        }
     }
 
-    /* span {
-        font-size:22px;
-        margin-left: 5px;
-        color: var(--primary-color);
-    } */
-
     @media screen and (max-width: 900px) {
-        /* display: none; */
-        /* flex-direction: column; */
         padding: 25px 1rem;
         align-items: baseline;
+        d
         
 
         div {
@@ -100,7 +83,9 @@ const HEADER = styled.header`
         }
 
         ul{
-            display: flex;
+            display: none;
+            width:0;
+            height:0;
             justify-content: space-between;
         }
 
@@ -146,7 +131,7 @@ function Menu(props) {
                     <li><Link href="/sobre">{props.link2}</Link></li>
                     <li><Link href="/bikes">{props.link3}</Link></li>
                     <li><a href="#" >Cadastre - se</a></li>
-                    <li><a href="#" className='btn-signUp'>Entrar</a></li>
+                    <li><a href="#" className='btn-entrar'>Entrar</a></li>
                 </ul>
             </HEADER>
         </>

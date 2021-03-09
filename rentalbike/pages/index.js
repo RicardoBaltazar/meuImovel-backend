@@ -22,12 +22,12 @@ const Main = styled.main`
     /* border: 1px solid red; */
 
   @media screen and (max-width: 900px) {
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
     text-align:left;
     height: 80vh;
     padding: 0 1rem;
-    margin-top: -10vh;
+    margin-top: -10vh; */
   }
 
 `
@@ -96,12 +96,21 @@ const SectionLogin = styled.section`
     color: #fff;
     /* margin-top: -3rem; */
 
+    
+
     form {
       display: flex;
       flex-direction: column;
       width: 25vw;
       /* border: 1px solid #fff; */
       padding: 1rem 0;
+
+      @media screen and (max-width: 900px) {
+        width: 50vw;
+      }
+      @media screen and (max-width: 600px) {
+        width: 90vw;
+      }
     }
 
     h2{
@@ -137,10 +146,13 @@ const SectionLogin = styled.section`
       }
     }
 
-
     p {
       color: #fff;
+      @media screen and (max-width: 900px) {
+        font-size: 0.8rem;
+      }
     }
+
     p a {
       font-weight: bold;
     }
@@ -163,7 +175,6 @@ export default function Home() {
         />
         <Main
           as={motion.section}
-          // transition={{ delay: 0.2, duration: 0.3 }}
           transition={{ ease: "easeOut", duration: 0.5 }}
           variants={{
             show: { opacity: 1 },
@@ -172,6 +183,7 @@ export default function Home() {
           initial='hidden'
           animate='show'
         >
+
           <SectionHome>
             <div className='div-title-home'>
               <h2>Alugue uma bicicleta e explore a cidade.</h2>
@@ -181,12 +193,9 @@ export default function Home() {
             </p>
               <Button text='Alugue uma Bike' />
             </div>
-            {/* <div className='responsive-sign'>
-              <a href="#" className='responsive-btn-signin'>Sign in</a>
-              <a href="#" className='responsive-btn-signUp'><b>Sign Up</b></a>
-            </div> */}
             <ImgHome src={img} />
           </SectionHome>
+
           <SectionLogin>
             <h2>Faça seu login</h2>
             <p>Se ainda não possui uma conta, <a>Cadastre - se!</a></p>
