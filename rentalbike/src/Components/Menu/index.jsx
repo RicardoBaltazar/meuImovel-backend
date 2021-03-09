@@ -145,8 +145,8 @@ function Menu(props) {
                     <li><Link href='/'>{props.link1}</Link></li>
                     <li><Link href="/sobre">{props.link2}</Link></li>
                     <li><Link href="/bikes">{props.link3}</Link></li>
-                    <li><a href="#" >Sign in</a></li>
-                    <li><a href="#" className='btn-signUp'>Sign Up</a></li>
+                    <li><a href="#" >Cadastre - se</a></li>
+                    <li><a href="#" className='btn-signUp'>Entrar</a></li>
                 </ul>
             </HEADER>
         </>
