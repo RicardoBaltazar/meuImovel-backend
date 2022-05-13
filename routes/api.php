@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function(){
     Route::prefix('real-states')->name('real-states.')->group(function(){
-        Route::get('/', 'RealStateController@index')->name('index');
+        Route::resource('/', 'RealStateController');
     });
 });
