@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Api\ApiMessages;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RealStateRequest;
 use App\Models\RealState;
 // use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\TryCatch;
 
 class RealStateController extends Controller
 {
@@ -32,7 +32,8 @@ class RealStateController extends Controller
             return response()->json($realState, 200);
 
         } catch (\Exception $error) {
-            return response()->json(['error' => $error->getMessage()], 401);
+            $message = new ApiMessages($error->getMessage());
+            return response()->json($message->getMessage(), 401);
         }
     }
 
@@ -45,7 +46,8 @@ class RealStateController extends Controller
             return response()->json('Imóvel cadastrado com sucesso', 200);
 
         } catch (\Exception $error) {
-            return response()->json(['error' => $error->getMessage()], 401);
+            $message = new ApiMessages($error->getMessage());
+            return response()->json($message->getMessage(), 401);
         }
     }
 
@@ -59,7 +61,8 @@ class RealStateController extends Controller
             return response()->json('Imóvel atualizado com sucesso', 200);
 
         } catch (\Exception $error) {
-            return response()->json(['error' => $error->getMessage()], 401);
+            $message = new ApiMessages($error->getMessage());
+            return response()->json($message->getMessage(), 401);
         }
     }
 
@@ -72,7 +75,8 @@ class RealStateController extends Controller
             return response()->json('Imóvel removido com sucesso', 200);
 
         } catch (\Exception $error) {
-            return response()->json(['error' => $error->getMessage()], 401);
+            $message = new ApiMessages($error->getMessage());
+            return response()->json($message->getMessage(), 401);
         }
     }
 }
