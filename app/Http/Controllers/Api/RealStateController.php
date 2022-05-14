@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\RealState;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\TryCatch;
 
 class RealStateController extends Controller
 {
@@ -24,6 +25,14 @@ class RealStateController extends Controller
 
     public function store(Request $request)
     {
-        return response()->json($request->all(), 200);
+        $data = $request->all();
+        try {
+            $realState = $this->realState->create($data); //Mass Asignment
+
+            return response()->json('Imóvel cadastrado com sucesso', 200);
+
+        } catch (\Exception $error) {
+            return response()->json(['error' => $error->getMessage()], 401);
+        }
     }
 }
