@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RealStateRequest;
 use App\Models\RealState;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\TryCatch;
 
 class RealStateController extends Controller
@@ -35,7 +36,7 @@ class RealStateController extends Controller
         }
     }
 
-    public function store(Request $request)
+    public function store(RealStateRequest $request)
     {
         $data = $request->all();
         try {
@@ -48,7 +49,7 @@ class RealStateController extends Controller
         }
     }
 
-    public function update($id, Request $request)
+    public function update($id, RealStateRequest $request)
     {
         $data = $request->all();
         try {
