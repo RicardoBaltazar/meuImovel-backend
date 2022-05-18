@@ -22,4 +22,8 @@ Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function(){
     Route::name('real-states.')->group(function(){
         Route::resource('real-states', 'RealStateController');
     });
+
+    Route::name('users.')->group(function(){
+        Route::resource('users', 'UserController');
+    });
 });
