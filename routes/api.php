@@ -28,6 +28,7 @@ Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function(){
     });
 
     Route::name('categories.')->group(function(){
+        Route::get('categories/{id}/real-states', 'CategoryController@realState');
         Route::resource('categories', 'CategoryController');
     });
 });
