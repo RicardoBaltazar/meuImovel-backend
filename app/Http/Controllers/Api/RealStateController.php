@@ -43,6 +43,11 @@ class RealStateController extends Controller
         try {
             $realState = $this->realState->create($data); //Mass Asignment
 
+            //sincronização com tabelas relacionadas
+            if(isset($data['categories']) && count($data['categories'])) {
+                $realState->categories()->sync($data['categories']);
+            }
+
             return response()->json('Imóvel cadastrado com sucesso', 200);
 
         } catch (\Exception $error) {
@@ -57,6 +62,10 @@ class RealStateController extends Controller
         try {
             $realState = $this->realState->findOrFail($id);
             $realState->update($data);
+
+            if(isset($data['categories']) && count($data['categories'])) {
+                $realState->categories()->sync($data['categories']);
+            }
 
             return response()->json('Imóvel atualizado com sucesso', 200);
 
