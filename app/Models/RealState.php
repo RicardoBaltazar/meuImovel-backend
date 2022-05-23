@@ -22,6 +22,11 @@ class RealState extends Model
     {
         return $this->belongsToMany(Category::class, 'real_state_categories');
     }
+
+    public function photos()
+    {
+        return $this->hasMany(RealStatePhoto::class);
+    }
 }
 
 //obs: quando a importação das classes esta na mesma pasta, não precisar ter importação com use
