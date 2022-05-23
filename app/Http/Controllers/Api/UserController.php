@@ -6,6 +6,7 @@ use App\Api\ApiMessages;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -35,15 +36,28 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        if(!$request->has('password') || !$request->get('password')){
+        $data = $request->all();
+
+        if (!$request->has('password') || !$request->get('password')) {
             $message = new ApiMessages('É necessário informar uma senha para o usuário...');
             return response()->json($message->getMessage(), 401);
         }
 
-        $data = $request->all();
+        Validator::make($data, [
+            'phone' => 'required',
+            'mobile_phone' => 'required'
+        ]);
+
         try {
             $data['password'] = bcrypt('password');
+
             $user = $this->user->create($data);
+            $user->profile()->create(
+                [
+                    'phone' => $data['phone'],
+                    'mobile_phone' => $data['mobile_phone'],
+                ]
+            );
 
             return response()->json('Usuário cadastrado com sucesso', 200);
 
@@ -83,7 +97,7 @@ class UserController extends Controller
     {
         $data = $request->all();
 
-        if(!$request->has('password') && !$request->get('password')){
+        if (!$request->has('password') && !$request->get('password')) {
             $data['password'] = bcrypt($data['password']);
         } else {
             unset($data['password']);
